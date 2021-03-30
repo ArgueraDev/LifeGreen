@@ -8,6 +8,8 @@
   <!--CSS-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
   <script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
   <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
   <link rel="stylesheet" href="public/css/style.css">
@@ -16,156 +18,241 @@
   <title>Inicio</title>
 </head>
 
-<body class="bg-dark">
+<body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-      <a class="logo">Green<span class="logo2">Life</span></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <a class="logo">VI<span class="logo2">DS</span></a>
+      <div> </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-        <div class="navbar-nav">
-          <a class="opcion op-Activo" aria-current="page" href="#">Inicio</a>
-          <a class="opcion" href="/biodiversidad.html">Biodiversidad</a>
-          <a class="opcion" href="#">Áreas protegidas</a>
-        </div>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#" title="Inicio">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/biodiversidad.html" title="Biodiversidad">Biodiversidad</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" title="Áreas protegidas">Áreas protegidas</a>
+          </li>
+          <li class="nav-item dropdown" title="Ayuda">
+            <a class="nav-link" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false"><i data-feather="help-circle"></i></a>
+            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#preguntas">Preguntas
+                  Frecuentes</a></li>
+              <li><a class="dropdown-item" href="#">Uso de la Web</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown" title="Socio">
+            <a class="nav-link" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false"><i data-feather="user"></i></a>
+            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="#">Iniciar Sesión</a></li>
+              <li><a class="dropdown-item" href="#">Registrarse</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#terminos">Términos y
+                  Condiciones</a></li>
+            </ul>
+          </li>
+        </ul>
       </div>
     </div>
   </nav>
-  <div class="roulet-content difuso">
-    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="public/img/1.jpg" class="img-roulet" alt="...">
+  <div class="container">
+    <div class="roulet-content difuso">
+      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="public/img/LagoCoatepeque.jpg" class="img-roulet" alt="coatepeque">
+            <div class="carousel-caption d-none d-md-block difuso">
+              <h5>Lago de Coatepeque</h5>
+              <p>Es un lago de origen volcánico, situado a 18 km al sur de la ciudad de Santa Ana en el municipio de El
+                Congo.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="public/img/torogoz.jpg" class="img-roulet" alt="torogoz">
+            <div class="carousel-caption d-none d-md-block difuso">
+              <h5>Momoto Cejiazul</h5>
+              <p>Es una especie de ave coraciforme de la familia Momotidae. Habita en Centroamérica desde la península
+                de Yucatán hasta Panamá.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="public/img/lagunajocotal.jpg" class="img-roulet" alt="...">
+            <div class="carousel-caption d-none d-md-block difuso">
+              <h5>Laguna El Jocotal</h5>
+              <p>Está ubicada en el municipio de El Tránsito, departamento de San Miguel, su altitud es de 24 m s.n.m.,
+                su extensión es de aproximadamente 500 manzanas.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="public/img/quetzal.jpg" class="img-roulet" alt="...">
+            <div class="carousel-caption d-none d-md-block difuso">
+              <h5>Quetzal</h5>
+              <p>Es un género de ave de la familia de los trogones. Se trata de una especie que en las civilizaciones
+                maya era sagrado y su plumaje era utilizado para adornar la indumentaria de los reyes y sacerdotes.</p>
+            </div>
+          </div>
         </div>
-        <div class="carousel-item">
-          <img src="public/img/2.jpg" class="img-roulet" alt="...">
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+    <div class="section">
+      <div class="row g-0 bg-light position-relative">
+        <div class="col-md-6 mb-md-0 p-md-4">
+          <img src="public/img/obj.jpg" class="w-100" alt="Objetivo">
         </div>
-        <div class="carousel-item">
-          <img src="public/img/3.jpg" class="img-roulet" alt="...">
-        </div>
-        <div class="carousel-item">
-          <img src="public/img/4.jpg" class="img-roulet" alt="...">
+        <div class="col-md-6 p-4 ps-md-0">
+          <h5 class="mt-0">Objetivo de VIDS</h5>
+          <p>Orientar a la población salvadoreña sobre el cuidado de todos los vegetales, animales y otros organismos
+            no domesticados para evitar la extinción de cada una de las especies, localizar las zonas donde se
+            encuentran los distintos ecosistemas y que hacer para proteger y conservar la biodiversidad.</p>
         </div>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
-        data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
-        data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
+      <div class="row g-0 bg-light position-relative">
+        <div class="col p-4 ps-md-4">
+          <h5 class="mt-0">¿Como cuidar la biodiversidad?</h5>
+          <p>Cada 22 de mayo se celebra el Día Mundial de la Biodiversidad, la fecha señalada por la Organización de
+            Naciones Unidas (ONU), para concienciar al mundo sobre la importancia de proteger los recursos
+            biológicos
+            y la biodiversidad global que conforma la naturaleza: no solo las diferentes especies de plantas,
+            animales
+            o microorganismos que existen, sino también las diversidades genéticas dentro de cada una de ellas, así
+            como la enorme variedad de ecosistemas que forman el planeta.
+            <br> <br>
+            Hay muchas formas de conservar el medio ambiente y mejorar la calidad del aire, el agua y la tierra. Te
+            contamos algunas de ellas.
+            <br> <br>
+            <strong>1. No al plástico de un solo uso</strong>
+            <br>
+            Está más que demostrado científicamente que el consumo de plástico que termina en los océanos afecta
+            toda
+            la biodiversidad y se integra a la cadena alimenticia. Los humanos volvemos a consumir ese mismo
+            plástico,
+            lo que afecta directamente a la salud.
+            <br>
+            Para evitarlo, cada vez que vayas al supermercado lleva tu propia bolsa de manta, si compras algo muy
+            pequeño pídelo sin bolsa. También puedes utilizar varias veces una botella de agua llenándola en casa y
+            llevándola donde vayas.
+            <br><br>
+            <strong>2. Sin pajilla, gracias</strong>
+            <br>
+            Son muy peligrosas para la fauna marina, ya que se confunden con comida y son ingeridas por peces y
+            tortugas. Las pajillas son un asesino de la naturaleza, las usas un par de minutos y luego se van a la
+            basura. En 2015, un vídeo de una tortuga con una pajilla atorada en la fosa nasal fue visto por casi 12
+            millones de usuarios y sirvió de detonador para una campaña mundial de sensibilización.
+            <br>
+            Todo se soluciona con un “sin pajilla, gracias”, y en el país algunos lugares se han unido a la
+            tendencia.
+            <br><br>
+            <strong>3. Las tres “R”</strong>
+            <br>
+            Reutilizar, reciclar y reutilizar va de la mano con la filosofía “ecofriendly”. Lo puedes hacer con ropa
+            y
+            todo lo que se te ocurra. Es toda una tendencia con muebles; llantas de carro convertidas en sillones,
+            puertas en mesas o escritorios, cajas de madera en libreras, etc.
+            <br>
+            En la red social Pinterest puedes encontrar cientos de ideas de cómo convertir un objeto en otro
+            completamente diferente y “cool”. <br>
+            Todo es cuestión de voluntad y conciencia medioambiental.
+            <br><br>
+            <strong>4. Cuida los espacios verdes</strong>
+            <br>
+            Se puede lograr mucho con no botar la basura en parques, calles o en la playa. Si vas de paseo, lleva
+            siempre un recipiente para colocar la basura, será mejor si separas plástico, vidrio y basura orgánica.
+            <br>
+            Es común ver las playas de El Salvador llenas de botellas y otros desperdicios que dejan los turistas,
+            especialmente los mismos salvadoreños. Además de empeorar la contaminación, afecta la imagen que se
+            llevan
+            los visitantes extranjeros de la cultura local.
+            <br><br>
+            <strong>5. Educa a tus hijos</strong>
+            <br>
+            Si bien el cuidado del planeta está en manos de los adultos, dentro de 20 años dependerá de los niños de
+            hoy. Por ello la importancia de educar y desarrollar conciencia sobre el cuidado del medio ambiente en
+            las
+            nuevas generaciones. Haz salidas a bosques, playas y espacios verdes con tus hijos. Ponlos en contacto
+            con
+            especies de árboles y plantas, animales y recursos naturales para que los conozcan y valoren. Enséñale a
+            no botar basura en las calles, a producir menos basura, etc.</p>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="container">
-    <div class="section difuso2">
-      <div class="accordion" id="accordionExample">
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingOne">
-            <button class="accordion-button bg-dark text-white" type="button" data-bs-toggle="collapse"
-              data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-              Objetivo de GreenLife
-            </button>
-          </h2>
-          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-            data-bs-parent="#accordionExample">
-            <div class="accordion-body text-white">
-              Orientar a la población salvadoreña sobre el cuidado de todos los vegetales, animales y otros organismos
-              no domesticados para evitar la extinción de cada una de las especies, localizar las zonas donde se
-              encuentran los distintos ecosistemas y que hacer para proteger y conservar la biodiversidad.
-            </div>
-          </div>
+  <div class="modal" id="preguntas" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Preguntas Frecuentes</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingTwo">
-            <button class="accordion-button bg-dark text-white collapsed" type="button" data-bs-toggle="collapse"
-              data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-              Información de especies
-            </button>
-          </h2>
-          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-            data-bs-parent="#accordionExample">
-            <div class="accordion-body text-white">
-              <strong>This is the second item's accordion body.</strong>
-            </div>
-          </div>
+        <div class="modal-body">
+          Texto de marcador de posición para esta demostración de un diálogo modal centrado verticalmente.
+          <br>
+          En este caso, el diálogo tiene un poco más de contenido, solo para mostrar cómo se puede agregar el centrado
+          vertical a un modal desplazable.
+          <br>
+          Lo que sigue es solo un texto de marcador de posición para este diálogo modal. Bebiendo Rosé, sol de Silver
+          Lake, llegando todos perezosos. Está en la palma de tu mano ahora bebé. Así que llegamos al bulevar. Así que
+          pide un deseo, lo haré como tu cumpleaños todos los días. ¿Alguna vez te has sentido enterrado a dos metros de
+          profundidad? Es hora de sacar los globos grandes. Podrías haber sido el mejor. Sellos de pasaporte, es
+          cosmopolita. Tu beso es cósmico, cada movimiento es mágico.
+          <br>
+          Estamos viviendo la vida. Lo estamos haciendo bien. Abre tu corazón. Estaba tratando de golpearlo y dejarlo.
+          Su amor es como una droga. Siempre deja un rastro de polvo de estrellas. La chica es un fenómeno, conduce un
+          jeep en Laguna Beach. Bien, fresco, feroz, lo tenemos bloqueado. Todas mis chicas vintage Chanel baby.
         </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingThree">
-            <button class="accordion-button bg-dark text-white collapsed" type="button" data-bs-toggle="collapse"
-              data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-              ¿Como cuidar la biodiversidad?
-            </button>
-          </h2>
-          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-            data-bs-parent="#accordionExample">
-            <div class="accordion-body text-white">
-              Cada 22 de mayo se celebra el Día Mundial de la Biodiversidad, la fecha señalada por la Organización de
-              Naciones Unidas (ONU), para concienciar al mundo sobre la importancia de proteger los recursos biológicos
-              y la biodiversidad global que conforma la naturaleza: no solo las diferentes especies de plantas, animales
-              o microorganismos que existen, sino también las diversidades genéticas dentro de cada una de ellas, así
-              como la enorme variedad de ecosistemas que forman el planeta.
-              <br> <br>
-              Hay muchas formas de conservar el medio ambiente y mejorar la calidad del aire, el agua y la tierra. Te
-              contamos algunas de ellas.
-              <br> <br>
-              <strong>1. No al plástico de un solo uso</strong>
-              <br>
-              Está más que demostrado científicamente que el consumo de plástico que termina en los océanos afecta toda
-              la biodiversidad y se integra a la cadena alimenticia. Los humanos volvemos a consumir ese mismo plástico,
-              lo que afecta directamente a la salud.
-              <br>
-              Para evitarlo, cada vez que vayas al supermercado lleva tu propia bolsa de manta, si compras algo muy
-              pequeño pídelo sin bolsa. También puedes utilizar varias veces una botella de agua llenándola en casa y
-              llevándola donde vayas.
-              <br><br>
-              <strong>2. Sin pajilla, gracias</strong>
-              <br>
-              Son muy peligrosas para la fauna marina, ya que se confunden con comida y son ingeridas por peces y
-              tortugas. Las pajillas son un asesino de la naturaleza, las usas un par de minutos y luego se van a la
-              basura. En 2015, un vídeo de una tortuga con una pajilla atorada en la fosa nasal fue visto por casi 12
-              millones de usuarios y sirvió de detonador para una campaña mundial de sensibilización.
-              <br>
-              Todo se soluciona con un “sin pajilla, gracias”, y en el país algunos lugares se han unido a la tendencia.
-              <br><br>
-              <strong>3. Las tres “R”</strong>
-              <br>
-              Reutilizar, reciclar y reutilizar va de la mano con la filosofía “ecofriendly”. Lo puedes hacer con ropa y
-              todo lo que se te ocurra. Es toda una tendencia con muebles; llantas de carro convertidas en sillones,
-              puertas en mesas o escritorios, cajas de madera en libreras, etc.
-              <br>
-              En la red social Pinterest puedes encontrar cientos de ideas de cómo convertir un objeto en otro
-              completamente diferente y “cool”. <br>
-              Todo es cuestión de voluntad y conciencia medioambiental.
-              <br><br>
-              <strong>4. Cuida los espacios verdes</strong>
-              <br>
-              Se puede lograr mucho con no botar la basura en parques, calles o en la playa. Si vas de paseo, lleva
-              siempre un recipiente para colocar la basura, será mejor si separas plástico, vidrio y basura orgánica.
-              <br>
-              Es común ver las playas de El Salvador llenas de botellas y otros desperdicios que dejan los turistas,
-              especialmente los mismos salvadoreños. Además de empeorar la contaminación, afecta la imagen que se llevan
-              los visitantes extranjeros de la cultura local.
-              <br><br>
-              <strong>5. Educa a tus hijos</strong>
-              <br>
-              Si bien el cuidado del planeta está en manos de los adultos, dentro de 20 años dependerá de los niños de
-              hoy. Por ello la importancia de educar y desarrollar conciencia sobre el cuidado del medio ambiente en las
-              nuevas generaciones. Haz salidas a bosques, playas y espacios verdes con tus hijos. Ponlos en contacto con
-              especies de árboles y plantas, animales y recursos naturales para que los conozcan y valoren. Enséñale a
-              no botar basura en las calles, a producir menos basura, etc.
-            </div>
-          </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary">Cerrar</button>
         </div>
       </div>
     </div>
-    <br><br>
-    <div id="map"></div>
-    <br><br>
+  </div>
+  <div class="modal" id="terminos" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Términos y
+            Condiciones</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Texto de marcador de posición para esta demostración de un diálogo modal centrado verticalmente.
+          <br>
+          En este caso, el diálogo tiene un poco más de contenido, solo para mostrar cómo se puede agregar el centrado
+          vertical a un modal desplazable.
+          <br>
+          Lo que sigue es solo un texto de marcador de posición para este diálogo modal. Bebiendo Rosé, sol de Silver
+          Lake, llegando todos perezosos. Está en la palma de tu mano ahora bebé. Así que llegamos al bulevar. Así que
+          pide un deseo, lo haré como tu cumpleaños todos los días. ¿Alguna vez te has sentido enterrado a dos metros de
+          profundidad? Es hora de sacar los globos grandes. Podrías haber sido el mejor. Sellos de pasaporte, es
+          cosmopolita. Tu beso es cósmico, cada movimiento es mágico.
+          <br>
+          Estamos viviendo la vida. Lo estamos haciendo bien. Abre tu corazón. Estaba tratando de golpearlo y dejarlo.
+          Su amor es como una droga. Siempre deja un rastro de polvo de estrellas. La chica es un fenómeno, conduce un
+          jeep en Laguna Beach. Bien, fresco, feroz, lo tenemos bloqueado. Todas mis chicas vintage Chanel baby.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary">Cerrar</button>
+        </div>
+      </div>
+    </div>
   </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"

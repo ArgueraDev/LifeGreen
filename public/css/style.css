@@ -14,23 +14,6 @@
   color: rgb(5, 214, 5);
 }
 
-.opcion {
-  text-decoration: none;
-  color: white;
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: 20px;
-  font-weight: normal;
-  padding: 10px;
-}
-
-.opcion:hover {
-  color: rgba(5, 214, 5, 0.555);
-}
-
-.op-Activo {
-  color: rgb(5, 214, 5);
-}
-
 .roulet-content {
   margin-right: 0%;
   margin-left: 0%;
@@ -44,7 +27,7 @@
 }
 
 .img-roulet {
-  padding: 5px;
+  padding: 2px;
   height: 450px;
   display: block;
   margin: auto;
@@ -73,14 +56,15 @@
 }
 
 .difuso {
-  background-color: rgba(255, 255, 255, 0.11);
-}
-
-.difuso2 {
-  background-color: rgba(255, 255, 255, 0.068);
-  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .sombra {
   margin: 8px;
+}
+
+.navbar-r {
+  position: absolute;
+  left: 95%;
+  transform: translatex(-50%);
 }
